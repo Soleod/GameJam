@@ -1,5 +1,7 @@
 extends Node2D
 
+const swing_speed = 100
+
 var movement_counter = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,6 +12,5 @@ func _physics_process(delta):
 
 
 func fisz_movement(delta):
-	print(cos(movement_counter))
-	$Body.linear_velocity = Vector2.RIGHT * cos(movement_counter) * 50
+	$Body.linear_velocity = Vector2.RIGHT * cos(movement_counter) * swing_speed
 	movement_counter = movement_counter + delta
