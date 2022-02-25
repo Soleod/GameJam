@@ -4,12 +4,12 @@ var _timer = null
 
 var smoked_fisz_currency: float = 0.0
 var upgrades_dict: Dictionary = {
-	a = 10,
-	b = 15.3
+	a = 50000,
+	b = 0
 }
 
 var current_fish_progress: float = 0.0
-var progress_modifier: float = 10.0
+var progress_modifier: float = 0.0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -32,8 +32,8 @@ func update_progress_modifier():
 
 func fish_readiness_check():
 	if (current_fish_progress >= 100):
+		smoked_fisz_currency += floor(current_fish_progress/100)
 		current_fish_progress -= 100
-		smoked_fisz_currency += 1
 
 func init_timer():
 	_timer = Timer.new()

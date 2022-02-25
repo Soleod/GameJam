@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ryba_intro_mono.mp3-08005d5520161cb4d72ae971a7f51ae6.mp3str"
+
+[deps]
+
+source_file="res://Resources/ryba_intro_mono.mp3"
+dest_files=[ "res://.import/ryba_intro_mono.mp3-08005d5520161cb4d72ae971a7f51ae6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
