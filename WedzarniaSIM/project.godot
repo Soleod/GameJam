@@ -14,6 +14,11 @@ config/name="WedzarniaSIM"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Player="*res://Scenes/Player.tscn"
+ArchivementManager="*res://Scenes/ArchivementManager.tscn"
+
 [display]
 
 window/size/width=480

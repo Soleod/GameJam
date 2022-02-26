@@ -16,7 +16,6 @@ func _process(delta):
 	var modifier = Player.progress_modifier
 	var count = Player.smoked_fisz_currency
 	
-	print(count)
 	
 	if modifier > 100 and not modifier_archiv_dict["sledzik_na_raz"]:
 		modifier_archiv_dict["sledzik_na_raz"] = true

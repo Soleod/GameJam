@@ -11,17 +11,15 @@ func _ready():
 
 
 func _process(delta):
-	value = actual_value
+	value = Player.current_fish_progress
 
 
 func _on_FireButton_pressed():
-	actual_value += 10
+	Player.current_fish_progress += 10
 	
-	if actual_value < 0:
-		actual_value = 0
-	elif actual_value > 100:
-		actual_value = 100
-
 
 func _on_RegressionTimer_timeout():
-	actual_value -= 20 * reg_time
+	Player.current_fish_progress -= 20 * reg_time
+	
+	if Player.current_fish_progress < 0:
+		Player.current_fish_progress = 0
