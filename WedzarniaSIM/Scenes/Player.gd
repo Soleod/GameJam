@@ -2,7 +2,7 @@ extends Node
 
 var _timer = null
 
-var smoked_fisz_currency: int = 0
+var smoked_fisz_currency: int = 10000000
 
 var upgrades_dict: Dictionary = {}
 
@@ -58,49 +58,49 @@ func init_upgrades():
 	var firewood = { 
 		name = "Firewood", 
 		value = 10, 
-		cost = 100, 
+		cost = 80, 
 		count = 0 
 	}
 	
 	var gryl = { 
 		name = "Gryl", 
 		value = 100, 
-		cost = 1000, 
+		cost = 640, 
 		count = 0 
 	}
 	
 	var dutch_oven = { 
 		name = "Dutch Oven", 
 		value = 1000, 
-		cost = 10000, 
-		count = 1
+		cost = 5120, 
+		count = 0
 	}
 	
 	var smoke_machine = { 
 		name = "Smoke Machine", 
 		value = 10000, 
-		cost = 100000, 
+		cost = 40960, 
 		count = 0 
 	}
 	
 	var gryl_starego = { 
 		name = "Gryl Starego", 
-		value = 10000, 
-		cost = 100000, 
+		value = 100000, 
+		cost = 327680, 
 		count = 0 
 	}
 	
 	var placeholder_1 = { 
 		name = "P1", 
-		value = 10000, 
-		cost = 100000, 
+		value = 1000000, 
+		cost = 2621440, 
 		count = 0 
 	}
 	
 	var placeholder_2 = { 
 		name = "P2", 
-		value = 10000, 
-		cost = 100000, 
+		value = 10000000, 
+		cost = 20971520, 
 		count = 0 
 	}
 	
