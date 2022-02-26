@@ -1,0 +1,108 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://interface/default_theme.tres" type="Theme" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://interface/images/menu_bg.png" type="Texture" id=3]
+[ext_resource path="res://interface/MenuBox.gd" type="Script" id=4]
+
+[node name="MenuBox" type="Control"]
+margin_right = 300.0
+margin_bottom = 260.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_right = 300.0
+margin_bottom = 260.0
+texture = ExtResource( 3 )
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 280.0
+margin_bottom = 240.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 260.0
+margin_bottom = 19.0
+theme = ExtResource( 1 )
+text = "Menu"
+align = 1
+valign = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 23.0
+margin_right = 260.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 0, 35 )
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+margin_top = 62.0
+margin_right = 260.0
+margin_bottom = 81.0
+theme = ExtResource( 1 )
+text = "Głośność"
+align = 1
+valign = 1
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer"]
+margin_top = 85.0
+margin_right = 260.0
+margin_bottom = 101.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 105.0
+margin_right = 260.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 0, 35 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 144.0
+margin_right = 260.0
+margin_bottom = 208.0
+alignment = 1
+
+[node name="AchievementButton" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 38.0
+margin_right = 102.0
+margin_bottom = 64.0
+texture_normal = ExtResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 106.0
+margin_right = 154.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 48, 0 )
+
+[node name="ExitButton" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 158.0
+margin_right = 222.0
+margin_bottom = 64.0
+texture_normal = ExtResource( 2 )
+
+[node name="ExitButton" type="TextureButton" parent="."]
+margin_left = 270.0
+margin_right = 300.0
+margin_bottom = 30.0
+texture_normal = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

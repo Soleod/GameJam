@@ -73,7 +73,7 @@ func init_upgrades():
 		name = "Dutch Oven", 
 		value = 1000, 
 		cost = 10000, 
-		count = 0 
+		count = 1
 	}
 	
 	var smoke_machine = { 
