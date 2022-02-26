@@ -27,7 +27,7 @@ func _process(delta):
 
 
 func _on_BuyModeButton_pressed():
-	if buy_mode == 100:
+	if buy_mode == -1:
 		buy_mode = 1
 	elif buy_mode == 1:
 		buy_mode = 10
@@ -35,6 +35,8 @@ func _on_BuyModeButton_pressed():
 		buy_mode = 25
 	elif buy_mode == 25:
 		buy_mode = 100
+	elif buy_mode == 100:
+		buy_mode = -1
 	
 	if buy_mode == 1:
 		$Upgrades/BuyModeButton.texture_normal = load("res://interface/images/buy_mode_1.png")
@@ -44,6 +46,8 @@ func _on_BuyModeButton_pressed():
 		$Upgrades/BuyModeButton.texture_normal = load("res://interface/images/buy_mode_3.png")
 	elif buy_mode == 100:
 		$Upgrades/BuyModeButton.texture_normal = load("res://interface/images/buy_mode_4.png")
+	elif buy_mode == -1:
+		$Upgrades/BuyModeButton.texture_normal = load("res://interface/images/buy_mode_max.png")
 
 
 func _on_UpgradeButton1_pressed():
@@ -54,7 +58,7 @@ func _on_UpgradeButton1_pressed():
 	if ryba >= cost:
 		count = floor(ryba / cost)
 		
-		if count > buy_mode:
+		if count > buy_mode and buy_mode != -1:
 			count = buy_mode
 			
 		Player.smoked_fisz_currency -= count * cost
@@ -69,7 +73,7 @@ func _on_UpgradeButton2_pressed():
 	if ryba >= cost:
 		count = floor(ryba / cost)
 		
-		if count > buy_mode:
+		if count > buy_mode and buy_mode != -1:
 			count = buy_mode
 			
 		Player.smoked_fisz_currency -= count * cost
@@ -84,7 +88,7 @@ func _on_UpgradeButton3_pressed():
 	if ryba >= cost:
 		count = floor(ryba / cost)
 		
-		if count > buy_mode:
+		if count > buy_mode and buy_mode != -1:
 			count = buy_mode
 			
 		Player.smoked_fisz_currency -= count * cost
@@ -99,7 +103,7 @@ func _on_UpgradeButton4_pressed():
 	if ryba >= cost:
 		count = floor(ryba / cost)
 		
-		if count > buy_mode:
+		if count > buy_mode and buy_mode != -1:
 			count = buy_mode
 			
 		Player.smoked_fisz_currency -= count * cost
@@ -114,7 +118,7 @@ func _on_UpgradeButton5_pressed():
 	if ryba >= cost:
 		count = floor(ryba / cost)
 		
-		if count > buy_mode:
+		if count > buy_mode and buy_mode != -1:
 			count = buy_mode
 			
 		Player.smoked_fisz_currency -= count * cost
@@ -129,7 +133,7 @@ func _on_UpgradeButton6_pressed():
 	if ryba >= cost:
 		count = floor(ryba / cost)
 		
-		if count > buy_mode:
+		if count > buy_mode and buy_mode != -1:
 			count = buy_mode
 			
 		Player.smoked_fisz_currency -= count * cost
@@ -144,7 +148,7 @@ func _on_UpgradeButton7_pressed():
 	if ryba >= cost:
 		count = floor(ryba / cost)
 		
-		if count > buy_mode:
+		if count > buy_mode and buy_mode != -1:
 			count = buy_mode
 			
 		Player.smoked_fisz_currency -= count * cost
@@ -159,7 +163,7 @@ func _on_UpgradeButton8_pressed():
 	if ryba >= cost:
 		count = floor(ryba / cost)
 		
-		if count > buy_mode:
+		if count > buy_mode and buy_mode != -1:
 			count = buy_mode
 			
 		Player.smoked_fisz_currency -= count * cost
