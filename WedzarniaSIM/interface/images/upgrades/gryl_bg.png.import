@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/buy_mode_1.png-e6885e578efed33582869027a9310a21.stex"
+path="res://.import/gryl_bg.png-bf496560fae141a9f984f82ea2fc5b2e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://interface/images/buy_mode_1.png"
-dest_files=[ "res://.import/buy_mode_1.png-e6885e578efed33582869027a9310a21.stex" ]
+source_file="res://interface/images/upgrades/gryl_bg.png"
+dest_files=[ "res://.import/gryl_bg.png-bf496560fae141a9f984f82ea2fc5b2e.stex" ]
 
 [params]
 

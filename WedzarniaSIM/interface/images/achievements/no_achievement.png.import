@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/progressbar_bg.png-5f7cf22869772ae3123b2a2212b0382a.stex"
+path="res://.import/no_achievement.png-e853abb1294a699832b6117da0d14af9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://interface/images/progressbar_bg.png"
-dest_files=[ "res://.import/progressbar_bg.png-5f7cf22869772ae3123b2a2212b0382a.stex" ]
+source_file="res://interface/images/achievements/no_achievement.png"
+dest_files=[ "res://.import/no_achievement.png-e853abb1294a699832b6117da0d14af9.stex" ]
 
 [params]
 

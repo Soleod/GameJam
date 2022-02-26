@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/buy_mode_4.png-d1a754e23e4b92b2f70d996cfead46df.stex"
+path="res://.import/menu_button_bg.png-b029f6a1a3f4a53d5c26054d4f4ef8e5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://interface/images/buy_mode_4.png"
-dest_files=[ "res://.import/buy_mode_4.png-d1a754e23e4b92b2f70d996cfead46df.stex" ]
+source_file="res://interface/images/menu/menu_button_bg.png"
+dest_files=[ "res://.import/menu_button_bg.png-b029f6a1a3f4a53d5c26054d4f4ef8e5.stex" ]
 
 [params]
 

@@ -39,15 +39,15 @@ func _on_BuyModeButton_pressed():
 		buy_mode = -1
 	
 	if buy_mode == 1:
-		$Upgrades/BuyModeButton.texture_normal = load("res://interface/images/buy_mode_1.png")
+		$Upgrades/BuyModeButton.texture_normal = load("res://interface/images/buy_modes/buy_mode_1.png")
 	elif buy_mode == 10:
-		$Upgrades/BuyModeButton.texture_normal = load("res://interface/images/buy_mode_2.png")
+		$Upgrades/BuyModeButton.texture_normal = load("res://interface/images/buy_modes/buy_mode_2.png")
 	elif buy_mode == 25:
-		$Upgrades/BuyModeButton.texture_normal = load("res://interface/images/buy_mode_3.png")
+		$Upgrades/BuyModeButton.texture_normal = load("res://interface/images/buy_modes/buy_mode_3.png")
 	elif buy_mode == 100:
-		$Upgrades/BuyModeButton.texture_normal = load("res://interface/images/buy_mode_4.png")
+		$Upgrades/BuyModeButton.texture_normal = load("res://interface/images/buy_modes/buy_mode_4.png")
 	elif buy_mode == -1:
-		$Upgrades/BuyModeButton.texture_normal = load("res://interface/images/buy_mode_max.png")
+		$Upgrades/BuyModeButton.texture_normal = load("res://interface/images/buy_modes/buy_mode_max.png")
 
 
 func _on_UpgradeButton1_pressed():

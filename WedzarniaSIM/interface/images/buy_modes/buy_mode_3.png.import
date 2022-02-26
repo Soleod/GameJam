@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/achievement.png-314a28802cf6635bbcc5dbeb71e9970c.stex"
+path="res://.import/buy_mode_3.png-9010abd004a7a07853812a34a84950b2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://interface/images/achievement.png"
-dest_files=[ "res://.import/achievement.png-314a28802cf6635bbcc5dbeb71e9970c.stex" ]
+source_file="res://interface/images/buy_modes/buy_mode_3.png"
+dest_files=[ "res://.import/buy_mode_3.png-9010abd004a7a07853812a34a84950b2.stex" ]
 
 [params]
 

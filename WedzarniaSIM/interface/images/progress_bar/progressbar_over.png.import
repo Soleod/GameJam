@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/buy_mode_2.png-7d79b1d9359ae25127520983ba6e2287.stex"
+path="res://.import/progressbar_over.png-9ee9d64e79f2b27d96e6dee90e416062.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://interface/images/buy_mode_2.png"
-dest_files=[ "res://.import/buy_mode_2.png-7d79b1d9359ae25127520983ba6e2287.stex" ]
+source_file="res://interface/images/progress_bar/progressbar_over.png"
+dest_files=[ "res://.import/progressbar_over.png-9ee9d64e79f2b27d96e6dee90e416062.stex" ]
 
 [params]
 

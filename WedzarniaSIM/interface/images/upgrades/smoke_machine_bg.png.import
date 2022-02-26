@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/progressbar_fill.png-328c9d9616be64b15c626dbc2d4da41f.stex"
+path="res://.import/smoke_machine_bg.png-91e9cbe8ed2ef7f3c4477c6311bfd331.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://interface/images/progressbar_fill.png"
-dest_files=[ "res://.import/progressbar_fill.png-328c9d9616be64b15c626dbc2d4da41f.stex" ]
+source_file="res://interface/images/upgrades/smoke_machine_bg.png"
+dest_files=[ "res://.import/smoke_machine_bg.png-91e9cbe8ed2ef7f3c4477c6311bfd331.stex" ]
 
 [params]
 

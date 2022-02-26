@@ -14,12 +14,12 @@ var fisz_achieved: Dictionary = {
 
 func _ready():
 	visible = false
-	$VBoxContainer/Achievement1.texture = load("res://interface/images/no_achievement.png")
-	$VBoxContainer/Achievement2.texture = load("res://interface/images/no_achievement.png")
-	$VBoxContainer/Achievement3.texture = load("res://interface/images/no_achievement.png")
-	$VBoxContainer/Achievement4.texture = load("res://interface/images/no_achievement.png")
-	$VBoxContainer/Achievement5.texture = load("res://interface/images/no_achievement.png")
-	$VBoxContainer/Achievement6.texture = load("res://interface/images/no_achievement.png")
+	$VBoxContainer/Achievement1.texture = load("res://interface/images/achievements/no_achievement.png")
+	$VBoxContainer/Achievement2.texture = load("res://interface/images/achievements/no_achievement.png")
+	$VBoxContainer/Achievement3.texture = load("res://interface/images/achievements/no_achievement.png")
+	$VBoxContainer/Achievement4.texture = load("res://interface/images/achievements/no_achievement.png")
+	$VBoxContainer/Achievement5.texture = load("res://interface/images/achievements/no_achievement.png")
+	$VBoxContainer/Achievement6.texture = load("res://interface/images/achievements/no_achievement.png")
 	
 	$AchievementTimer.wait_time = 1
 	$AchievementTimer.start()

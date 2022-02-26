@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/no_achievement.png-681f5f1b352c1dafba2edc8ee07ca4c9.stex"
+path="res://.import/exit_bg.png-2a468f44d80d09589c0992923a9694ee.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://interface/images/no_achievement.png"
-dest_files=[ "res://.import/no_achievement.png-681f5f1b352c1dafba2edc8ee07ca4c9.stex" ]
+source_file="res://interface/images/menu/exit_bg.png"
+dest_files=[ "res://.import/exit_bg.png-2a468f44d80d09589c0992923a9694ee.stex" ]
 
 [params]
 
