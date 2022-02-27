@@ -5,7 +5,7 @@
 [ext_resource path="res://interface/images/menu_bg.png" type="Texture" id=3]
 [ext_resource path="res://interface/MenuBox.gd" type="Script" id=4]
 [ext_resource path="res://interface/images/menu/exit_bg.png" type="Texture" id=5]
-[ext_resource path="res://Resources/ryba_intro_loop_2.mp3" type="AudioStream" id=6]
+[ext_resource path="res://Resources/ryba.mp3" type="AudioStream" id=6]
 
 [node name="MenuBox" type="Control"]
 margin_right = 300.0
