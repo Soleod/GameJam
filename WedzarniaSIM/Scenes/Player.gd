@@ -2,7 +2,7 @@ extends Node
 
 var _timer = null
 
-var smoked_fisz_currency: int = 10000000
+var smoked_fisz_currency: int = 0
 var prev_fisz_currency: int = 0
 var fish_per_sec: int = 0
 
