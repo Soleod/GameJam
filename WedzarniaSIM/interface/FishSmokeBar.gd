@@ -11,7 +11,13 @@ func _ready():
 
 
 func _process(delta):
-	value = Player.current_fish_progress
+	value = Player.current_fish_progress if Player.progress_modifier < 100 else 100
+	
+	if value == 100:
+		texture_progress = load("res://interface/images/progress_bar/progress_anim.tres")
+	else:
+		texture_progress = load("res://interface/images/progress_bar/progressbar_fill.png")
+		
 
 
 func _on_FireButton_pressed():

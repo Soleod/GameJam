@@ -3,6 +3,10 @@ extends Node
 var _timer = null
 
 var smoked_fisz_currency: int = 10000000
+var prev_fisz_currency: int = 0
+var fish_per_sec: float = 0.0
+
+var click_power: int = 1
 
 var upgrades_dict: Dictionary = {}
 
@@ -21,9 +25,14 @@ func _process(delta):
 func _on_Timer_timeout():
 	update_progress_modifier()
 	progress_fisz()
+	fish_readiness_check()
+	calculate_fps()
+
+func calculate_fps():
+	if smoked_fisz_currency - prev_fisz_currency >= 0: fish_per_sec = smoked_fisz_currency - prev_fisz_currency
+	prev_fisz_currency = smoked_fisz_currency
 
 func progress_fisz():
-	print(current_fish_progress)
 	current_fish_progress += progress_modifier
 
 func update_progress_modifier():
