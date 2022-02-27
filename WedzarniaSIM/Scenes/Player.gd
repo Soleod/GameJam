@@ -4,9 +4,10 @@ var _timer = null
 
 var smoked_fisz_currency: int = 10000000
 var prev_fisz_currency: int = 0
-var fish_per_sec: float = 0.0
+var fish_per_sec: int = 0
 
-var click_power: int = 1
+var click_power: float = 1.0
+var click_count: int = 0
 
 var upgrades_dict: Dictionary = {}
 
@@ -29,7 +30,8 @@ func _on_Timer_timeout():
 	calculate_fps()
 
 func calculate_fps():
-	if smoked_fisz_currency - prev_fisz_currency >= 0: fish_per_sec = smoked_fisz_currency - prev_fisz_currency
+	if smoked_fisz_currency - prev_fisz_currency >= 0:
+		fish_per_sec = smoked_fisz_currency - prev_fisz_currency
 	prev_fisz_currency = smoked_fisz_currency
 
 func progress_fisz():
@@ -66,7 +68,7 @@ func init_upgrades():
 	
 	var firewood = { 
 		name = "Firewood", 
-		value = 10, 
+		value = 2, 
 		cost = 80, 
 		count = 0 
 	}

@@ -21,7 +21,7 @@ func _process(delta):
 
 
 func _on_FireButton_pressed():
-	Player.current_fish_progress += 10
+	Player.current_fish_progress += 10 * Player.click_power
 	
 
 func _on_RegressionTimer_timeout():

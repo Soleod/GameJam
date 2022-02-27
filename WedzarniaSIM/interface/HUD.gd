@@ -15,14 +15,23 @@ func _process(delta):
 		upgrades[key] = convert(Player.upgrades_dict[key]["count"], TYPE_STRING)
 	
 	
-	$Upgrades/UpgradeButton1/Label.text = upgrades["auto_clicker"]
-	$Upgrades/UpgradeButton2/Label.text = upgrades["firewood"]
-	$Upgrades/UpgradeButton3/Label.text = upgrades["gryl"]
-	$Upgrades/UpgradeButton4/Label.text = upgrades["dutch_oven"]
-	$Upgrades/UpgradeButton5/Label.text = upgrades["smoke_machine"]
-	$Upgrades/UpgradeButton6/Label.text = upgrades["gryl_starego"]
-	$Upgrades/UpgradeButton7/Label.text = upgrades["placeholder_1"]
-	$Upgrades/UpgradeButton8/Label.text = upgrades["placeholder_2"]
+	$Upgrades/UpgradeButton1/Label.text = convert(Player.click_count, TYPE_STRING)
+	$Upgrades/UpgradeButton2/Label.text = upgrades["auto_clicker"]
+	$Upgrades/UpgradeButton3/Label.text = upgrades["firewood"]
+	$Upgrades/UpgradeButton4/Label.text = upgrades["gryl"]
+	$Upgrades/UpgradeButton5/Label.text = upgrades["dutch_oven"]
+	$Upgrades/UpgradeButton6/Label.text = upgrades["smoke_machine"]
+	$Upgrades/UpgradeButton7/Label.text = upgrades["gryl_starego"]
+	$Upgrades/UpgradeButton8/Label.text = upgrades["placeholder_1"]
+	
+	$Upgrades/UpgradeButton1/Label2.text = convert(5 + Player.click_count, TYPE_STRING)
+	$Upgrades/UpgradeButton2/Label2.text = convert(Player.upgrades_dict["auto_clicker"]["cost"], TYPE_STRING)
+	$Upgrades/UpgradeButton3/Label2.text = convert(Player.upgrades_dict["firewood"]["cost"], TYPE_STRING)
+	$Upgrades/UpgradeButton4/Label2.text = convert(Player.upgrades_dict["gryl"]["cost"], TYPE_STRING)
+	$Upgrades/UpgradeButton5/Label2.text = convert(Player.upgrades_dict["dutch_oven"]["cost"], TYPE_STRING)
+	$Upgrades/UpgradeButton6/Label2.text = convert(Player.upgrades_dict["smoke_machine"]["cost"], TYPE_STRING)
+	$Upgrades/UpgradeButton7/Label2.text = convert(Player.upgrades_dict["gryl_starego"]["cost"], TYPE_STRING)
+	$Upgrades/UpgradeButton8/Label2.text = convert(Player.upgrades_dict["placeholder_1"]["cost"], TYPE_STRING)
 	
 
 
@@ -52,6 +61,22 @@ func _on_BuyModeButton_pressed():
 
 func _on_UpgradeButton1_pressed():
 	var ryba = Player.smoked_fisz_currency
+	var cost = 5 + Player.click_count
+	var count = 0
+	
+	if ryba >= cost:
+		count = floor(ryba / cost)
+		
+		if count > buy_mode and buy_mode != -1:
+			count = buy_mode
+			
+		Player.smoked_fisz_currency -= count * cost
+		Player.click_power += count * 10
+		Player.click_count += count
+
+
+func _on_UpgradeButton2_pressed():
+	var ryba = Player.smoked_fisz_currency
 	var cost = Player.upgrades_dict["auto_clicker"]["cost"]
 	var count = 0
 	
@@ -65,7 +90,7 @@ func _on_UpgradeButton1_pressed():
 		Player.upgrades_dict["auto_clicker"]["count"] += count
 
 
-func _on_UpgradeButton2_pressed():
+func _on_UpgradeButton3_pressed():
 	var ryba = Player.smoked_fisz_currency
 	var cost = Player.upgrades_dict["firewood"]["cost"]
 	var count = 0
@@ -80,7 +105,7 @@ func _on_UpgradeButton2_pressed():
 		Player.upgrades_dict["firewood"]["count"] += count
 
 
-func _on_UpgradeButton3_pressed():
+func _on_UpgradeButton4_pressed():
 	var ryba = Player.smoked_fisz_currency
 	var cost = Player.upgrades_dict["gryl"]["cost"]
 	var count = 0
@@ -95,7 +120,7 @@ func _on_UpgradeButton3_pressed():
 		Player.upgrades_dict["gryl"]["count"] += count
 
 
-func _on_UpgradeButton4_pressed():
+func _on_UpgradeButton5_pressed():
 	var ryba = Player.smoked_fisz_currency
 	var cost = Player.upgrades_dict["dutch_oven"]["cost"]
 	var count = 0
@@ -110,7 +135,7 @@ func _on_UpgradeButton4_pressed():
 		Player.upgrades_dict["dutch_oven"]["count"] += count
 
 
-func _on_UpgradeButton5_pressed():
+func _on_UpgradeButton6_pressed():
 	var ryba = Player.smoked_fisz_currency
 	var cost = Player.upgrades_dict["smoke_machine"]["cost"]
 	var count = 0
@@ -125,7 +150,7 @@ func _on_UpgradeButton5_pressed():
 		Player.upgrades_dict["smoke_machine"]["count"] += count
 
 
-func _on_UpgradeButton6_pressed():
+func _on_UpgradeButton7_pressed():
 	var ryba = Player.smoked_fisz_currency
 	var cost = Player.upgrades_dict["gryl_starego"]["cost"]
 	var count = 0
@@ -140,7 +165,7 @@ func _on_UpgradeButton6_pressed():
 		Player.upgrades_dict["gryl_starego"]["count"] += count
 
 
-func _on_UpgradeButton7_pressed():
+func _on_UpgradeButton8_pressed():
 	var ryba = Player.smoked_fisz_currency
 	var cost = Player.upgrades_dict["placeholder_1"]["cost"]
 	var count = 0
@@ -153,18 +178,3 @@ func _on_UpgradeButton7_pressed():
 			
 		Player.smoked_fisz_currency -= count * cost
 		Player.upgrades_dict["placeholder_1"]["count"] += count
-
-
-func _on_UpgradeButton8_pressed():
-	var ryba = Player.smoked_fisz_currency
-	var cost = Player.upgrades_dict["placeholder_2"]["cost"]
-	var count = 0
-	
-	if ryba >= cost:
-		count = floor(ryba / cost)
-		
-		if count > buy_mode and buy_mode != -1:
-			count = buy_mode
-			
-		Player.smoked_fisz_currency -= count * cost
-		Player.upgrades_dict["placeholder_2"]["count"] += count
