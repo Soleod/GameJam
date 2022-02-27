@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://interface/default_theme.tres" type="Theme" id=1]
 [ext_resource path="res://interface/images/menu/achievements_bg.png" type="Texture" id=2]
 [ext_resource path="res://interface/images/menu_bg.png" type="Texture" id=3]
 [ext_resource path="res://interface/MenuBox.gd" type="Script" id=4]
 [ext_resource path="res://interface/images/menu/exit_bg.png" type="Texture" id=5]
+[ext_resource path="res://Resources/ryba_intro_loop_2.mp3" type="AudioStream" id=6]
 
 [node name="MenuBox" type="Control"]
 margin_right = 300.0
@@ -64,6 +65,9 @@ valign = 1
 margin_top = 85.0
 margin_right = 260.0
 margin_bottom = 101.0
+min_value = -60.0
+max_value = 20.0
+value = 20.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -84,6 +88,7 @@ alignment = 1
 margin_left = 52.0
 margin_right = 102.0
 margin_bottom = 50.0
+rect_pivot_offset = Vector2( 25, 25 )
 texture_normal = ExtResource( 2 )
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
@@ -107,3 +112,14 @@ expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 149, 374 )
+stream = ExtResource( 6 )
+autoplay = true
+
+[connection signal="value_changed" from="VBoxContainer/HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="mouse_entered" from="VBoxContainer/HBoxContainer/AchievementButton" to="." method="_on_AchievementButton_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/HBoxContainer/AchievementButton" to="." method="_on_AchievementButton_mouse_exited"]
+[connection signal="mouse_entered" from="VBoxContainer/HBoxContainer/ExitButton" to="." method="_on_ExitButton_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/HBoxContainer/ExitButton" to="." method="_on_ExitButton_mouse_exited"]

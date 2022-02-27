@@ -178,3 +178,91 @@ func _on_UpgradeButton8_pressed():
 			
 		Player.smoked_fisz_currency -= count * cost
 		Player.upgrades_dict["placeholder_1"]["count"] += count
+
+
+func _on_UpgradeButton1_mouse_entered():
+	$Upgrades/UpgradeButton1.rect_scale = Vector2(1.05, 1.05)
+
+
+func _on_UpgradeButton1_mouse_exited():
+	$Upgrades/UpgradeButton1.rect_scale = Vector2(1, 1)
+
+
+func _on_UpgradeButton2_mouse_entered():
+	$Upgrades/UpgradeButton2.rect_scale = Vector2(1.05, 1.05)
+
+
+func _on_UpgradeButton2_mouse_exited():
+	$Upgrades/UpgradeButton2.rect_scale = Vector2(1, 1)
+
+
+func _on_UpgradeButton3_mouse_entered():
+	$Upgrades/UpgradeButton3.rect_scale = Vector2(1.05, 1.05)
+
+
+func _on_UpgradeButton3_mouse_exited():
+	$Upgrades/UpgradeButton3.rect_scale = Vector2(1, 1)
+
+
+func _on_UpgradeButton4_mouse_entered():
+	$Upgrades/UpgradeButton4.rect_scale = Vector2(1.05, 1.05)
+
+
+func _on_UpgradeButton4_mouse_exited():
+	$Upgrades/UpgradeButton4.rect_scale = Vector2(1, 1)
+
+
+func _on_UpgradeButton5_mouse_entered():
+	$Upgrades/UpgradeButton5.rect_scale = Vector2(1.05, 1.05)
+
+
+func _on_UpgradeButton5_mouse_exited():
+	$Upgrades/UpgradeButton5.rect_scale = Vector2(1, 1)
+
+
+func _on_UpgradeButton6_mouse_entered():
+	$Upgrades/UpgradeButton6.rect_scale = Vector2(1.05, 1.05)
+
+
+func _on_UpgradeButton6_mouse_exited():
+	$Upgrades/UpgradeButton6.rect_scale = Vector2(1, 1)
+
+
+func _on_UpgradeButton7_mouse_entered():
+	$Upgrades/UpgradeButton7.rect_scale = Vector2(1.05, 1.05)
+
+
+func _on_UpgradeButton7_mouse_exited():
+	$Upgrades/UpgradeButton7.rect_scale = Vector2(1, 1)
+
+
+func _on_UpgradeButton8_mouse_entered():
+	$Upgrades/UpgradeButton8.rect_scale = Vector2(1.05, 1.05)
+
+
+func _on_UpgradeButton8_mouse_exited():
+	$Upgrades/UpgradeButton8.rect_scale = Vector2(1, 1)
+
+
+func _on_FireButton_mouse_entered():
+	$FireButton.rect_scale = Vector2(1.05, 1.05)
+
+
+func _on_FireButton_mouse_exited():
+	$FireButton.rect_scale = Vector2(1, 1)
+
+
+func _on_BuyModeButton_mouse_entered():
+	$Upgrades/BuyModeButton.rect_scale = Vector2(1.05, 1.05)
+
+
+func _on_BuyModeButton_mouse_exited():
+	$Upgrades/BuyModeButton.rect_scale = Vector2(1, 1)
+
+
+func _on_MenuButton_mouse_entered():
+	$MenuButton.rect_scale = Vector2(1.05, 1.05)
+
+
+func _on_MenuButton_mouse_exited():
+	$MenuButton.rect_scale = Vector2(1, 1)
